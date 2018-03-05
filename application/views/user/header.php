@@ -13,7 +13,8 @@
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <![endif]-->    
+    <script src="<?= base_url('user_assets/js/ajax_call.js'); ?>"></script>   
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -116,11 +117,12 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<input type="text" placeholder="Search" id="filter"/>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 	

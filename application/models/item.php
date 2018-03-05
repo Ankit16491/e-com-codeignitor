@@ -88,4 +88,11 @@ class Item extends CI_Model {
 	public function delete_item($item_id){
 		return $this->db->delete('items',['id'=>$item_id]);	
 	}
+
+	function search_filter_name($val){
+		$qry = $this->db->select()
+						->where('item_name')
+						->get('items');
+			return $qry->result();
+	}
 }

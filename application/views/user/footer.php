@@ -164,5 +164,24 @@
 	<script src="<?= base_url('user_assets/js/price-range.js') ?>"></script>
     <script src="<?= base_url('user_assets/js/jquery.prettyPhoto.js') ?>"></script>
     <script src="<?= base_url('user_assets/js/main.js') ?>"></script>
+    <script>
+		$("#filter").click(function(){
+			$("#filter").css("width","200px");
+		});
+	</script>
+	<script>
+		$("#filter").keyup(function(){
+			var val = $("#filter").val();
+			$.ajax({
+			url:'User_controller/search_filter',
+			method:"POST",
+			data:{'search_val':val},
+			success:function(data);{
+				//console.log(data);
+				$(".features_items").html(data);
+			}
+		}); 
+		});
+	</script>
 </body>
-</html>
+</html
